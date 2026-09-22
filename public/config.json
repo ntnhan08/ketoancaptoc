@@ -1,107 +1,141 @@
 {
   "site": {
-    "title": "Kế Toán Pro - Trung Tâm Đào Tạo Kế Toán",
-    "logo": "Kế Toán Pro",
-    "tagline": "Đào tạo kế toán thực tế - Cam kết việc làm",
-    "heroTitle": "Nâng Tầm Sự Nghiệp Kế Toán Của Bạn",
-    "heroSubtitle": "Khóa học kế toán thực hành từ cơ bản đến nâng cao. Giảng viên giàu kinh nghiệm, cam kết chất lượng đầu ra.",
+    "title": "Lớp Học Kế Toán Thực Chiến",
+    "logo": "Kế Toán Thực Chiến",
+    "tagline": "Thành thạo thực tế - Vững vàng luật pháp",
+    "heroTitle": "Lớp Học Kế Toán Thực Chiến",
+    "heroSubtitle": "Đào tạo kế toán chuyên sâu về nghiệp vụ thực tế và pháp luật thuế. Cam kết học viên tự tin xử lý mọi tình huống doanh nghiệp.",
     "heroImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
   },
   "about": {
     "title": "Về Chúng Tôi",
-    "description": "Kế Toán Pro là trung tâm đào tạo kế toán hàng đầu với hơn 10 năm kinh nghiệm. Chúng tôi cam kết mang đến cho học viên kiến thức thực tế, kỹ năng chuyên môn vững vàng để tự tin bước vào môi trường làm việc.",
+    "description": "Lớp Học Kế Toán Thực Chiến là đơn vị đào tạo chuyên sâu về nghiệp vụ kế toán và pháp luật thuế hiện hành. Với đội ngũ giảng viên là kế toán trưởng, luật sư thuế giàu kinh nghiệm, chúng tôi cam kết mang đến kiến thức thực tiễn nhất.",
     "stats": [
       { "number": "5000+", "label": "Học viên" },
-      { "number": "10+", "label": "Năm kinh nghiệm" },
-      { "number": "95%", "label": "Hài lòng" },
-      { "number": "50+", "label": "Doanh nghiệp đối tác" }
+      { "number": "15+", "label": "Năm kinh nghiệm" },
+      { "number": "98%", "label": "Hài lòng" },
+      { "number": "100+", "label": "Doanh nghiệp" }
     ]
   },
-  "courses": [
+  "features": [
     {
-      "id": 1,
-      "name": "Kế Toán Tổng Hợp",
-      "description": "Khóa học dành cho người mới bắt đầu. Học từ lý thuyết đến thực hành trên chứng từ thực tế.",
-      "price": "3.500.000",
-      "originalPrice": "5.000.000",
-      "duration": "3 tháng",
-      "lessons": "45 bài học",
-      "level": "Cơ bản",
-      "features": ["Học trên chứng từ thực", "Phần mềm MISA, Fast", "Hỗ trợ 24/7", "Cấp chứng chỉ"],
-      "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=400&q=80"
+      "icon": "calculator",
+      "title": "Nghiệp Vụ Thực Tế",
+      "description": "Học trên chứng từ thật, xử lý tình huống thực tế từ doanh nghiệp. Thực hành ngay trên phần mềm MISA, Fast, Bravo."
     },
     {
-      "id": 2,
-      "name": "Kế Toán Thuế Chuyên Sâu",
-      "description": "Nắm vững kiến thức thuế, lập báo cáo thuế, quyết toán thuế cho doanh nghiệp.",
-      "price": "2.800.000",
-      "originalPrice": "4.000.000",
-      "duration": "2 tháng",
-      "lessons": "30 bài học",
-      "level": "Trung cấp",
-      "features": ["Thuế GTGT, TNCN, TNDN", "Báo cáo thuế hàng tháng", "Quyết toán năm", "Cập nhật luật mới nhất"],
-      "image": "https://images.unsplash.com/photo-1554224155-8d0422119f5d?w=400&q=80"
+      "icon": "law",
+      "title": "Pháp Luật Thuế",
+      "description": "Cập nhật liên tục các văn bản luật thuế mới nhất. Nắm vững GTGT, TNCN, TNDN và các quy định pháp lý liên quan."
     },
     {
-      "id": 3,
-      "name": "Kế Toán Máy (MISA & Excel)",
-      "description": "Thành thạo phần mềm kế toán MISA và Excel nâng cao cho công việc kế toán.",
-      "price": "2.500.000",
-      "originalPrice": "3.500.000",
-      "duration": "2 tháng",
-      "lessons": "35 bài học",
-      "level": "Cơ bản - Trung cấp",
-      "features": ["MISA SME 2024", "Excel nâng cao", "Thực hành trên máy", "Bài tập tổng hợp"],
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80"
+      "icon": "chart",
+      "title": "Phân Tích Tài Chính",
+      "description": "Kỹ năng đọc hiểu và phân tích báo cáo tài chính. Tư vấn chiến lược tài chính cho doanh nghiệp."
     },
     {
-      "id": 4,
-      "name": "Kế Toán Trưởng",
-      "description": "Khóa học nâng cao dành cho người muốn trở thành kế toán trưởng, quản lý phòng kế toán.",
-      "price": "5.500.000",
-      "originalPrice": "8.000.000",
-      "duration": "4 tháng",
-      "lessons": "60 bài học",
-      "level": "Nâng cao",
-      "features": ["Quản lý tài chính", "Phân tích báo cáo", "Tư vấn thuế", "Kỹ năng lãnh đạo"],
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      "icon": "shield",
+      "title": "Quyết Toán Thuế",
+      "description": "Hướng dẫn chi tiết quy trình quyết toán thuế. Xử lý các tình huống thanh tra, kiểm tra thuế."
+    },
+    {
+      "icon": "document",
+      "title": "Hóa Đơn Chứng Từ",
+      "description": "Thành thạo xử lý hóa đơn điện tử, chứng từ kế toán theo quy định mới nhất của pháp luật."
+    },
+    {
+      "icon": "team",
+      "title": "Hỗ Trợ Trọn Đời",
+      "description": "Hỗ trợ học viên trong suốt quá trình làm việc. Cộng đồng kế toán thực chiến luôn đồng hành."
+    }
+  ],
+  "legalUpdates": [
+    {
+      "date": "01/2024",
+      "title": "Nghị định 123/2020/NĐ-CP",
+      "description": "Quy định mới về hóa đơn, chứng từ điện tử áp dụng từ ngày 01/07/2022",
+      "tag": "Hóa đơn"
+    },
+    {
+      "date": "06/2024",
+      "title": "Luật Quản lý thuế số 38/2019/QH14",
+      "description": "Cập nhật các quy định về khai thuế, nộp thuế và xử phạt vi phạm hành chính",
+      "tag": "Luật thuế"
+    },
+    {
+      "date": "09/2024",
+      "title": "Thông tư 40/2021/TT-BTC",
+      "description": "Hướng dẫn thuế GTGT, TNCN cho hộ kinh doanh, cá nhân kinh doanh",
+      "tag": "Thông tư"
+    },
+    {
+      "date": "11/2024",
+      "title": "Nghị định 126/2020/NĐ-CP",
+      "description": "Quy định chi tiết một số điều của Luật Quản lý thuế về lệ phí trước bạ",
+      "tag": "Lệ phí"
     }
   ],
   "testimonials": [
     {
       "name": "Nguyễn Thị Hoa",
       "role": "Kế toán tổng hợp - Công ty ABC",
-      "content": "Sau khóa học tại Kế Toán Pro, tôi tự tin xử lý mọi công việc kế toán. Giảng viên rất nhiệt tình, kiến thức thực tế.",
+      "content": "Sau khóa học, tôi tự tin xử lý mọi nghiệp vụ kế toán và hiểu rõ luật thuế. Giảng viên rất chuyên nghiệp, kiến thức thực tế.",
       "avatar": "https://i.pravatar.cc/100?img=1"
     },
     {
       "name": "Trần Văn Minh",
       "role": "Kế toán thuế - Tập đoàn XYZ",
-      "content": "Khóa học thuế chuyên sâu giúp tôi nắm vững mọi quy định thuế. Đã áp dụng ngay vào công việc và được sếp đánh giá cao.",
+      "content": "Phần pháp luật thuế rất chi tiết và cập nhật. Đã áp dụng ngay vào công việc và được đánh giá cao về năng lực.",
       "avatar": "https://i.pravatar.cc/100?img=3"
     },
     {
       "name": "Lê Thị Lan",
       "role": "Kế toán trưởng - Công ty DEF",
-      "content": "Từ một kế toán viên bình thường, sau khóa Kế Toán Trưởng tôi đã được thăng chức. Cảm ơn trung tâm rất nhiều!",
+      "content": "Từ kế toán viên bình thường, sau khóa học tôi đã tự tin đảm nhận vị trí kế toán trưởng. Kiến thức thực chiến rất giá trị!",
       "avatar": "https://i.pravatar.cc/100?img=5"
     }
   ],
   "contact": {
     "phone": "0901 234 567",
-    "email": "info@ketoanpro.vn",
+    "email": "info@ketoanthuchien.vn",
     "address": "123 Đường Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh",
     "workingHours": "Thứ 2 - Thứ 7: 8:00 - 21:00 | Chủ nhật: 8:00 - 17:00",
-    "facebook": "https://facebook.com/ketoanpro",
-    "youtube": "https://youtube.com/ketoanpro"
+    "facebook": "https://facebook.com/ketoanthuchien",
+    "youtube": "https://youtube.com/ketoanthuchien"
   },
   "googleSheet": {
     "scriptURL": "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec"
   },
   "registration": {
-    "title": "Đăng Ký Khóa Học",
-    "subtitle": "Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí",
-    "successMessage": "Đăng ký thành công! Chúng tôi sẽ liên hệ bạn trong thời gian sớm nhất.",
+    "title": "Đăng Ký Tham Gia",
+    "subtitle": "Để lại thông tin, chúng tôi sẽ liên hệ tư vấn lộ trình học phù hợp",
+    "successMessage": "Đăng ký thành công! Chúng tôi sẽ liên hệ bạn trong 30 phút.",
     "errorMessage": "Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ hotline."
+  },
+  "pricing": {
+    "title": "Học Phí & Ưu Đãi",
+    "items": [
+      {
+        "name": "Gói Cơ Bản",
+        "price": "3.500.000",
+        "originalPrice": "5.000.000",
+        "duration": "3 tháng",
+        "features": ["Nghiệp vụ kế toán", "Thực hành chứng từ", "Phần mềm MISA", "Hỗ trợ 24/7"]
+      },
+      {
+        "name": "Gói Nâng Cao",
+        "price": "5.500.000",
+        "originalPrice": "8.000.000",
+        "duration": "4 tháng",
+        "features": ["Toàn bộ gói cơ bản", "Pháp luật thuế chuyên sâu", "Quyết toán thuế", "Phân tích tài chính", "Chứng chỉ"]
+      },
+      {
+        "name": "Gói Doanh Nghiệp",
+        "price": "Liên hệ",
+        "originalPrice": "",
+        "duration": "Theo yêu cầu",
+        "features": ["Đào tạo tại DN", "Thiết kế theo nhu cầu", "Tư vấn trực tiếp", "Hỗ trợ dài hạn"]
+      }
+    ]
   }
 }
