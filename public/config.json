@@ -1,0 +1,107 @@
+{
+  "site": {
+    "title": "Kế Toán Pro - Trung Tâm Đào Tạo Kế Toán",
+    "logo": "Kế Toán Pro",
+    "tagline": "Đào tạo kế toán thực tế - Cam kết việc làm",
+    "heroTitle": "Nâng Tầm Sự Nghiệp Kế Toán Của Bạn",
+    "heroSubtitle": "Khóa học kế toán thực hành từ cơ bản đến nâng cao. Giảng viên giàu kinh nghiệm, cam kết chất lượng đầu ra.",
+    "heroImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+  },
+  "about": {
+    "title": "Về Chúng Tôi",
+    "description": "Kế Toán Pro là trung tâm đào tạo kế toán hàng đầu với hơn 10 năm kinh nghiệm. Chúng tôi cam kết mang đến cho học viên kiến thức thực tế, kỹ năng chuyên môn vững vàng để tự tin bước vào môi trường làm việc.",
+    "stats": [
+      { "number": "5000+", "label": "Học viên" },
+      { "number": "10+", "label": "Năm kinh nghiệm" },
+      { "number": "95%", "label": "Hài lòng" },
+      { "number": "50+", "label": "Doanh nghiệp đối tác" }
+    ]
+  },
+  "courses": [
+    {
+      "id": 1,
+      "name": "Kế Toán Tổng Hợp",
+      "description": "Khóa học dành cho người mới bắt đầu. Học từ lý thuyết đến thực hành trên chứng từ thực tế.",
+      "price": "3.500.000",
+      "originalPrice": "5.000.000",
+      "duration": "3 tháng",
+      "lessons": "45 bài học",
+      "level": "Cơ bản",
+      "features": ["Học trên chứng từ thực", "Phần mềm MISA, Fast", "Hỗ trợ 24/7", "Cấp chứng chỉ"],
+      "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=400&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Kế Toán Thuế Chuyên Sâu",
+      "description": "Nắm vững kiến thức thuế, lập báo cáo thuế, quyết toán thuế cho doanh nghiệp.",
+      "price": "2.800.000",
+      "originalPrice": "4.000.000",
+      "duration": "2 tháng",
+      "lessons": "30 bài học",
+      "level": "Trung cấp",
+      "features": ["Thuế GTGT, TNCN, TNDN", "Báo cáo thuế hàng tháng", "Quyết toán năm", "Cập nhật luật mới nhất"],
+      "image": "https://images.unsplash.com/photo-1554224155-8d0422119f5d?w=400&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Kế Toán Máy (MISA & Excel)",
+      "description": "Thành thạo phần mềm kế toán MISA và Excel nâng cao cho công việc kế toán.",
+      "price": "2.500.000",
+      "originalPrice": "3.500.000",
+      "duration": "2 tháng",
+      "lessons": "35 bài học",
+      "level": "Cơ bản - Trung cấp",
+      "features": ["MISA SME 2024", "Excel nâng cao", "Thực hành trên máy", "Bài tập tổng hợp"],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Kế Toán Trưởng",
+      "description": "Khóa học nâng cao dành cho người muốn trở thành kế toán trưởng, quản lý phòng kế toán.",
+      "price": "5.500.000",
+      "originalPrice": "8.000.000",
+      "duration": "4 tháng",
+      "lessons": "60 bài học",
+      "level": "Nâng cao",
+      "features": ["Quản lý tài chính", "Phân tích báo cáo", "Tư vấn thuế", "Kỹ năng lãnh đạo"],
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Nguyễn Thị Hoa",
+      "role": "Kế toán tổng hợp - Công ty ABC",
+      "content": "Sau khóa học tại Kế Toán Pro, tôi tự tin xử lý mọi công việc kế toán. Giảng viên rất nhiệt tình, kiến thức thực tế.",
+      "avatar": "https://i.pravatar.cc/100?img=1"
+    },
+    {
+      "name": "Trần Văn Minh",
+      "role": "Kế toán thuế - Tập đoàn XYZ",
+      "content": "Khóa học thuế chuyên sâu giúp tôi nắm vững mọi quy định thuế. Đã áp dụng ngay vào công việc và được sếp đánh giá cao.",
+      "avatar": "https://i.pravatar.cc/100?img=3"
+    },
+    {
+      "name": "Lê Thị Lan",
+      "role": "Kế toán trưởng - Công ty DEF",
+      "content": "Từ một kế toán viên bình thường, sau khóa Kế Toán Trưởng tôi đã được thăng chức. Cảm ơn trung tâm rất nhiều!",
+      "avatar": "https://i.pravatar.cc/100?img=5"
+    }
+  ],
+  "contact": {
+    "phone": "0901 234 567",
+    "email": "info@ketoanpro.vn",
+    "address": "123 Đường Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh",
+    "workingHours": "Thứ 2 - Thứ 7: 8:00 - 21:00 | Chủ nhật: 8:00 - 17:00",
+    "facebook": "https://facebook.com/ketoanpro",
+    "youtube": "https://youtube.com/ketoanpro"
+  },
+  "googleSheet": {
+    "scriptURL": "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec"
+  },
+  "registration": {
+    "title": "Đăng Ký Khóa Học",
+    "subtitle": "Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí",
+    "successMessage": "Đăng ký thành công! Chúng tôi sẽ liên hệ bạn trong thời gian sớm nhất.",
+    "errorMessage": "Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ hotline."
+  }
+}
