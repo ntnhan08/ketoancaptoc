@@ -49,6 +49,132 @@
       "description": "Hỗ trợ học viên trong suốt quá trình làm việc. Cộng đồng kế toán thực chiến luôn đồng hành."
     }
   ],
+  "instructors": {
+    "title": "Đội Ngũ Giảng Viên",
+    "subtitle": "Những chuyên gia hàng đầu với kinh nghiệm thực chiến",
+    "list": [
+      {
+        "name": "ThS. Nguyễn Văn Hùng",
+        "title": "Kế toán trưởng",
+        "experience": "20 năm kinh nghiệm",
+        "expertise": ["Kế toán tổng hợp", "Báo cáo tài chính", "Tư vấn thuế"],
+        "image": "https://i.pravatar.cc/300?img=12",
+        "certifications": ["CPA Việt Nam", "Thạc sĩ Kinh tế"]
+      },
+      {
+        "name": "LS. Trần Thị Mai",
+        "title": "Luật sư thuế",
+        "experience": "15 năm kinh nghiệm",
+        "expertise": ["Luật thuế TNDN", "Luật thuế GTGT", "Thanh tra thuế"],
+        "image": "https://i.pravatar.cc/300?img=5",
+        "certifications": ["Luật sư Đoàn TP.HCM", "Chứng chỉ hành nghề thuế"]
+      },
+      {
+        "name": "ThS. Lê Minh Tuấn",
+        "title": "Giám đốc tài chính",
+        "experience": "18 năm kinh nghiệm",
+        "expertise": ["Phân tích tài chính", "Quản trị rủi ro", "M&A"],
+        "image": "https://i.pravatar.cc/300?img=15",
+        "certifications": ["CFA Level 3", "ACCA"]
+      },
+      {
+        "name": "CN. Phạm Thị Hương",
+        "title": "Chuyên gia MISA",
+        "experience": "12 năm kinh nghiệm",
+        "expertise": ["Phần mềm MISA", "Kế toán máy", "Excel nâng cao"],
+        "image": "https://i.pravatar.cc/300?img=9",
+        "certifications": ["MISA Certified", "Microsoft Excel Expert"]
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Sau Khóa Học Bạn Nhận Được",
+    "subtitle": "Những giá trị thực tế bạn sẽ đạt được",
+    "items": [
+      {
+        "icon": "certificate",
+        "title": "Chứng chỉ hành nghề",
+        "description": "Nhận chứng chỉ có giá trị toàn quốc, được doanh nghiệp công nhận"
+      },
+      {
+        "icon": "skills",
+        "title": "Kỹ năng thực chiến",
+        "description": "Thành thạo xử lý mọi nghiệp vụ kế toán từ cơ bản đến nâng cao"
+      },
+      {
+        "icon": "law-book",
+        "title": "Am hiểu pháp luật",
+        "description": "Nắm vững các quy định thuế, luật kế toán và văn bản hướng dẫn"
+      },
+      {
+        "icon": "software",
+        "title": "Thành thạo phần mềm",
+        "description": "Sử dụng chuyên nghiệp MISA, Fast, Excel và các phần mềm kế toán"
+      },
+      {
+        "icon": "job",
+        "title": "Hỗ trợ việc làm",
+        "description": "Kết nối với mạng lưới 100+ doanh nghiệp đối tác tuyển dụng"
+      },
+      {
+        "icon": "community",
+        "title": "Cộng đồng chuyên gia",
+        "description": "Tham gia cộng đồng kế toán thực chiến, cập nhật kiến thức liên tục"
+      },
+      {
+        "icon": "support",
+        "title": "Hỗ trợ trọn đời",
+        "description": "Được tư vấn miễn phí trong suốt quá trình làm việc sau khóa học"
+      },
+      {
+        "icon": "confidence",
+        "title": "Tự tin thăng tiến",
+        "description": "Đủ năng lực đảm nhận vị trí kế toán trưởng, quản lý phòng kế toán"
+      }
+    ]
+  },
+  "targetAudience": {
+    "title": "Khóa Học Phù Hợp Với Ai",
+    "subtitle": "Dành cho những ai muốn phát triển sự nghiệp kế toán",
+    "groups": [
+      {
+        "icon": "student",
+        "title": "Sinh viên kế toán",
+        "description": "Muốn bổ sung kiến thức thực tế, chuẩn bị hành trang trước khi ra trường",
+        "highlight": "Sinh viên năm 3, năm 4"
+      },
+      {
+        "icon": "newbie",
+        "title": "Người mới bắt đầu",
+        "description": "Muốn chuyển sang ngành kế toán hoặc bắt đầu sự nghiệp kế toán từ đầu",
+        "highlight": "Chưa có kinh nghiệm"
+      },
+      {
+        "icon": "accountant",
+        "title": "Kế toán viên",
+        "description": "Đang làm kế toán muốn nâng cao trình độ, cập nhật kiến thức mới",
+        "highlight": "1-3 năm kinh nghiệm"
+      },
+      {
+        "icon": "manager",
+        "title": "Quản lý muốn thăng tiến",
+        "description": "Muốn trở thành kế toán trưởng, quản lý phòng kế toán chuyên nghiệp",
+        "highlight": "3+ năm kinh nghiệm"
+      },
+      {
+        "icon": "business",
+        "title": "Chủ doanh nghiệp",
+        "description": "Muốn hiểu rõ về kế toán, thuế để quản lý tài chính doanh nghiệp hiệu quả",
+        "highlight": "Chủ DN, startup"
+      },
+      {
+        "icon": "freelancer",
+        "title": "Kế toán dịch vụ",
+        "description": "Muốn mở rộng dịch vụ, nhận làm kế toán cho nhiều doanh nghiệp",
+        "highlight": "Kế toán tự do"
+      }
+    ]
+  },
   "legalUpdates": [
     {
       "date": "01/2024",
@@ -111,31 +237,5 @@
     "subtitle": "Để lại thông tin, chúng tôi sẽ liên hệ tư vấn lộ trình học phù hợp",
     "successMessage": "Đăng ký thành công! Chúng tôi sẽ liên hệ bạn trong 30 phút.",
     "errorMessage": "Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ hotline."
-  },
-  "pricing": {
-    "title": "Học Phí & Ưu Đãi",
-    "items": [
-      {
-        "name": "Gói Cơ Bản",
-        "price": "3.500.000",
-        "originalPrice": "5.000.000",
-        "duration": "3 tháng",
-        "features": ["Nghiệp vụ kế toán", "Thực hành chứng từ", "Phần mềm MISA", "Hỗ trợ 24/7"]
-      },
-      {
-        "name": "Gói Nâng Cao",
-        "price": "5.500.000",
-        "originalPrice": "8.000.000",
-        "duration": "4 tháng",
-        "features": ["Toàn bộ gói cơ bản", "Pháp luật thuế chuyên sâu", "Quyết toán thuế", "Phân tích tài chính", "Chứng chỉ"]
-      },
-      {
-        "name": "Gói Doanh Nghiệp",
-        "price": "Liên hệ",
-        "originalPrice": "",
-        "duration": "Theo yêu cầu",
-        "features": ["Đào tạo tại DN", "Thiết kế theo nhu cầu", "Tư vấn trực tiếp", "Hỗ trợ dài hạn"]
-      }
-    ]
   }
 }

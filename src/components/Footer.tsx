@@ -80,13 +80,19 @@ export default function Footer({ config }: FooterProps) {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Chương trình</h3>
             <ul className="space-y-3">
-              {config.pricing.items.map((item, index) => (
-                <li key={index}>
+              {[
+                { href: '#instructors', label: 'Giảng viên' },
+                { href: '#benefits', label: 'Giá trị nhận được' },
+                { href: '#audience', label: 'Đối tượng phù hợp' },
+                { href: '#legal', label: 'Cập nhật pháp luật' },
+                { href: '#testimonials', label: 'Học viên' },
+              ].map((link) => (
+                <li key={link.href}>
                   <button
-                    onClick={() => scrollToSection('#pricing')}
+                    onClick={() => scrollToSection(link.href)}
                     className="text-slate-400 hover:text-amber-400 transition-colors text-sm text-left"
                   >
-                    {item.name}
+                    {link.label}
                   </button>
                 </li>
               ))}

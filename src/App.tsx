@@ -3,8 +3,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Features from './components/Features';
+import Instructors from './components/Instructors';
+import Benefits from './components/Benefits';
+import TargetAudience from './components/TargetAudience';
 import LegalUpdates from './components/LegalUpdates';
-import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
 import RegistrationForm from './components/RegistrationForm';
 import Contact from './components/Contact';
@@ -29,6 +31,37 @@ export interface SiteConfig {
     title: string;
     description: string;
   }[];
+  instructors: {
+    title: string;
+    subtitle: string;
+    list: {
+      name: string;
+      title: string;
+      experience: string;
+      expertise: string[];
+      image: string;
+      certifications: string[];
+    }[];
+  };
+  benefits: {
+    title: string;
+    subtitle: string;
+    items: {
+      icon: string;
+      title: string;
+      description: string;
+    }[];
+  };
+  targetAudience: {
+    title: string;
+    subtitle: string;
+    groups: {
+      icon: string;
+      title: string;
+      description: string;
+      highlight: string;
+    }[];
+  };
   legalUpdates: {
     date: string;
     title: string;
@@ -57,16 +90,6 @@ export interface SiteConfig {
     subtitle: string;
     successMessage: string;
     errorMessage: string;
-  };
-  pricing: {
-    title: string;
-    items: {
-      name: string;
-      price: string;
-      originalPrice: string;
-      duration: string;
-      features: string[];
-    }[];
   };
 }
 
@@ -122,8 +145,10 @@ function App() {
       <Hero config={config} />
       <About config={config} />
       <Features config={config} />
+      <Instructors config={config} />
+      <Benefits config={config} />
+      <TargetAudience config={config} />
       <LegalUpdates config={config} />
-      <Pricing config={config} />
       <Testimonials config={config} />
       <RegistrationForm config={config} />
       <Contact config={config} />

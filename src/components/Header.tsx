@@ -20,9 +20,10 @@ export default function Header({ config }: HeaderProps) {
   const navLinks = [
     { href: '#home', label: 'Trang chủ' },
     { href: '#about', label: 'Giới thiệu' },
-    { href: '#features', label: 'Năng lực' },
+    { href: '#instructors', label: 'Giảng viên' },
+    { href: '#benefits', label: 'Giá trị' },
+    { href: '#audience', label: 'Đối tượng' },
     { href: '#legal', label: 'Pháp luật' },
-    { href: '#pricing', label: 'Học phí' },
     { href: '#register', label: 'Đăng ký' },
     { href: '#contact', label: 'Liên hệ' },
   ];

@@ -11,12 +11,11 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
     name: '',
     phone: '',
     email: '',
-    course: '',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const { ref, isInView } = useInView(0.1);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -28,10 +27,10 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
       const scriptURL = config.googleSheet.scriptURL;
       
       if (!scriptURL || scriptURL.includes('YOUR_SCRIPT_ID')) {
-        console.log('Demo mode - Form data:', formData);
+        console.log('Demo mode - Form ', formData);
         await new Promise(resolve => setTimeout(resolve, 1500));
         setStatus('success');
-        setFormData({ name: '', phone: '', email: '', course: '' });
+        setFormData({ name: '', phone: '', email: '' });
         return;
       }
 
@@ -43,13 +42,12 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
-          course: formData.course,
           timestamp: new Date().toISOString(),
         }),
       });
 
       setStatus('success');
-      setFormData({ name: '', phone: '', email: '', course: '' });
+      setFormData({ name: '', phone: '', email: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
@@ -135,7 +133,7 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                     onClick={() => setStatus('idle')}
                     className="text-amber-400 font-medium hover:underline"
                   >
-                    Đăng ký khóa học khác
+                    Đăng ký khác
                   </button>
                 </div>
               ) : (
@@ -188,25 +186,6 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                       placeholder="email@example.com"
                       className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all outline-none"
                     />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                      Chương trình quan tâm
-                    </label>
-                    <select
-                      name="course"
-                      value={formData.course}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all outline-none"
-                    >
-                      <option value="">-- Chọn chương trình --</option>
-                      {config.pricing.items.map((item, index) => (
-                        <option key={index} value={item.name}>
-                          {item.name} - {item.price}đ
-                        </option>
-                      ))}
-                    </select>
                   </div>
 
                   <button
