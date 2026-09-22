@@ -44,15 +44,10 @@ export default function TargetAudience({ config }: TargetAudienceProps) {
   const { ref, isInView } = useInView(0.1);
 
   return (
-    <section id="audience" className="py-24 bg-slate-900 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
-
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 rounded-full filter blur-3xl"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section id="audience" className="py-24 bg-slate-900 border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="text-center mb-16">
-          <span className={`inline-block bg-amber-500/10 border border-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-sm font-medium mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <span className={`inline-block bg-amber-500/10 border border-amber-500 text-amber-400 px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             Đối tượng tham gia
           </span>
           <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
@@ -63,48 +58,33 @@ export default function TargetAudience({ config }: TargetAudienceProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-slate-700">
           {config.targetAudience.groups.map((group, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-amber-500/50 transition-all duration-700 hover:-translate-y-2 overflow-hidden ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              className={`group relative bg-slate-800 border-r border-b border-slate-700 p-8 hover:bg-slate-700 transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              {/* Background icon */}
-              <div className="absolute -right-4 -bottom-4 text-amber-500/5 group-hover:text-amber-500/10 transition-colors duration-500">
-                <div className="w-32 h-32">
-                  {iconMap[group.icon] || iconMap.student}
-                </div>
-              </div>
-
               <div className="relative">
                 {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-14 h-14 bg-amber-500 flex items-center justify-center text-slate-900 mb-5 group-hover:bg-amber-400 transition-colors duration-300">
                   {iconMap[group.icon] || iconMap.student}
                 </div>
 
                 {/* Highlight badge */}
                 <div className="inline-block mb-3">
-                  <span className="px-3 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs rounded-full font-medium">
+                  <span className="px-3 py-1 bg-amber-500/10 border border-amber-500 text-amber-400 text-xs font-bold uppercase tracking-widest">
                     {group.highlight}
                   </span>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors uppercase tracking-wide">
                   {group.title}
                 </h3>
                 <p className="text-slate-400 leading-relaxed">
                   {group.description}
                 </p>
-
-                {/* Arrow */}
-                <div className="mt-5 flex items-center text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-medium">Tìm hiểu thêm</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
               </div>
             </div>
           ))}

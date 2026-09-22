@@ -42,12 +42,10 @@ export default function Features({ config }: FeaturesProps) {
   const { ref, isInView } = useInView(0.1);
 
   return (
-    <section id="features" className="py-24 bg-gradient-to-b from-slate-900 to-slate-800 relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
-      
+    <section id="features" className="py-24 bg-slate-800 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="text-center mb-16">
-          <span className={`inline-block bg-amber-500/10 border border-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-sm font-medium mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <span className={`inline-block bg-amber-500/10 border border-amber-500 text-amber-400 px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             Năng lực đào tạo
           </span>
           <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
@@ -58,21 +56,18 @@ export default function Features({ config }: FeaturesProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-slate-700">
           {config.features.map((feature, index) => (
             <div
               key={index}
-              className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-amber-500/50 transition-all duration-700 hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              className={`group relative bg-slate-900 border-r border-b border-slate-700 p-8 hover:bg-slate-800 transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
-              {/* Hover glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-500 rounded-2xl"></div>
-              
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-xl flex items-center justify-center text-amber-400 mb-5 group-hover:scale-110 group-hover:from-amber-500/30 transition-all duration-300">
+                <div className="w-14 h-14 bg-amber-500 flex items-center justify-center text-slate-900 mb-5 group-hover:bg-amber-400 transition-colors duration-300">
                   {iconMap[feature.icon] || iconMap.calculator}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300 uppercase tracking-wide">
                   {feature.title}
                 </h3>
                 <p className="text-slate-400 leading-relaxed">

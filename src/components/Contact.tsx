@@ -18,8 +18,7 @@ export default function Contact({ config }: ContactProps) {
       title: 'Điện thoại',
       content: config.contact.phone,
       link: `tel:${config.contact.phone}`,
-      bgClass: 'bg-amber-500/10 border-amber-500/20',
-      textClass: 'text-amber-400',
+      color: 'amber',
     },
     {
       icon: (
@@ -30,8 +29,7 @@ export default function Contact({ config }: ContactProps) {
       title: 'Email',
       content: config.contact.email,
       link: `mailto:${config.contact.email}`,
-      bgClass: 'bg-blue-500/10 border-blue-500/20',
-      textClass: 'text-blue-400',
+      color: 'blue',
     },
     {
       icon: (
@@ -43,8 +41,7 @@ export default function Contact({ config }: ContactProps) {
       title: 'Địa chỉ',
       content: config.contact.address,
       link: '#',
-      bgClass: 'bg-purple-500/10 border-purple-500/20',
-      textClass: 'text-purple-400',
+      color: 'purple',
     },
     {
       icon: (
@@ -55,18 +52,22 @@ export default function Contact({ config }: ContactProps) {
       title: 'Giờ làm việc',
       content: config.contact.workingHours,
       link: '#',
-      bgClass: 'bg-green-500/10 border-green-500/20',
-      textClass: 'text-green-400',
+      color: 'green',
     },
   ];
 
-  return (
-    <section id="contact" className="py-24 bg-slate-900 relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+  const colorMap: Record<string, { bg: string; text: string; border: string }> = {
+    amber: { bg: 'bg-amber-500', text: 'text-amber-400', border: 'border-amber-500' },
+    blue: { bg: 'bg-blue-500', text: 'text-blue-400', border: 'border-blue-500' },
+    purple: { bg: 'bg-purple-500', text: 'text-purple-400', border: 'border-purple-500' },
+    green: { bg: 'bg-green-500', text: 'text-green-400', border: 'border-green-500' },
+  };
 
+  return (
+    <section id="contact" className="py-24 bg-slate-900 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="text-center mb-16">
-          <span className={`inline-block bg-green-500/10 border border-green-500/20 text-green-400 px-4 py-1.5 rounded-full text-sm font-medium mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <span className={`inline-block bg-green-500/10 border border-green-500 text-green-400 px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             Liên hệ
           </span>
           <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
@@ -77,22 +78,25 @@ export default function Contact({ config }: ContactProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {contactItems.map((item, index) => (
-            <div
-              key={index}
-              className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-amber-500/30 transition-all duration-700 text-center group hover:-translate-y-2 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 100}ms` }}
-            >
-              <div className={`w-16 h-16 ${item.bgClass} border rounded-2xl flex items-center justify-center mx-auto mb-4 ${item.textClass} group-hover:scale-110 transition-transform duration-300`}>
-                {item.icon}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-700">
+          {contactItems.map((item, index) => {
+            const colors = colorMap[item.color];
+            return (
+              <div
+                key={index}
+                className={`bg-slate-800 border-r border-b border-slate-700 p-6 text-center group hover:bg-slate-700 transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${300 + index * 100}ms` }}
+              >
+                <div className={`w-16 h-16 ${colors.bg} flex items-center justify-center mx-auto mb-4 text-slate-900 group-hover:scale-110 transition-transform duration-300`}>
+                  {item.icon}
+                </div>
+                <h3 className="font-bold text-white mb-2 uppercase tracking-wider">{item.title}</h3>
+                <a href={item.link} className={`${colors.text} hover:underline text-sm`}>
+                  {item.content}
+                </a>
               </div>
-              <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-              <a href={item.link} className="text-slate-400 hover:text-amber-400 transition-colors text-sm">
-                {item.content}
-              </a>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -52,12 +52,10 @@ export default function Benefits({ config }: BenefitsProps) {
   const { ref, isInView } = useInView(0.1);
 
   return (
-    <section id="benefits" className="py-24 bg-gradient-to-b from-slate-800 to-slate-900 relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
-
+    <section id="benefits" className="py-24 bg-slate-800 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="text-center mb-16">
-          <span className={`inline-block bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <span className={`inline-block bg-emerald-500/10 border border-emerald-500 text-emerald-400 px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             Giá trị nhận được
           </span>
           <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
@@ -68,23 +66,23 @@ export default function Benefits({ config }: BenefitsProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-700">
           {config.benefits.items.map((benefit, index) => (
             <div
               key={index}
-              className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-700 hover:-translate-y-2 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              className={`group relative bg-slate-900 border-r border-b border-slate-700 p-6 hover:bg-slate-800 transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               {/* Number indicator */}
-              <div className="absolute top-4 right-4 text-4xl font-bold text-slate-700/50 group-hover:text-emerald-500/20 transition-colors">
+              <div className="absolute top-4 right-4 text-4xl font-bold text-slate-700 group-hover:text-amber-500/30 transition-colors font-mono">
                 {String(index + 1).padStart(2, '0')}
               </div>
 
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-emerald-500 flex items-center justify-center text-slate-900 mb-4 group-hover:bg-emerald-400 transition-colors duration-300">
                   {iconMap[benefit.icon] || iconMap.certificate}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors uppercase tracking-wide">
                   {benefit.title}
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">

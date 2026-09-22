@@ -55,25 +55,15 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
   };
 
   return (
-    <section id="register" className="py-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}></div>
-      </div>
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="register" className="py-24 bg-slate-800 border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className={`transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <span className="inline-block bg-amber-500/10 border border-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block bg-amber-500/10 border border-amber-500 text-amber-400 px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-6">
               Đăng ký ngay
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">
               {config.registration.title}
             </h2>
             <p className="text-slate-400 text-lg mb-8">
@@ -91,25 +81,25 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                   className={`flex items-start space-x-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}
                   style={{ transitionDelay: `${400 + index * 150}ms` }}
                 >
-                  <div className="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-amber-500 flex items-center justify-center flex-shrink-0">
                     {item.icon === 'clock' && (
-                      <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     )}
                     {item.icon === 'shield' && (
-                      <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
                     )}
                     {item.icon === 'gift' && (
-                      <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     )}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white text-lg">{item.title}</h3>
+                    <h3 className="font-bold text-white text-lg uppercase tracking-wide">{item.title}</h3>
                     <p className="text-slate-400">{item.desc}</p>
                   </div>
                 </div>
@@ -119,32 +109,32 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
 
           {/* Right - Form */}
           <div className={`transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 shadow-2xl">
+            <div className="bg-slate-900 border border-slate-700 p-8">
               {status === 'success' ? (
                 <div className="text-center py-8">
-                  <div className="w-20 h-20 bg-green-500/20 border border-green-500/30 rounded-full flex items-center justify-center mx-auto mb-4 animate-scale-in">
-                    <svg className="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <div className="w-20 h-20 bg-green-500 flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Đăng ký thành công!</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">Đăng ký thành công!</h3>
                   <p className="text-slate-400 mb-6">{config.registration.successMessage}</p>
                   <button
                     onClick={() => setStatus('idle')}
-                    className="text-amber-400 font-medium hover:underline"
+                    className="text-amber-400 font-bold uppercase tracking-wider hover:underline"
                   >
                     Đăng ký khác
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Đăng ký tư vấn</h3>
-                    <p className="text-slate-400 text-sm">Điền thông tin bên dưới để bắt đầu</p>
+                  <div className="border-b-2 border-amber-500 pb-4 mb-6">
+                    <h3 className="text-2xl font-bold text-white uppercase tracking-wide">Đăng ký tư vấn</h3>
+                    <p className="text-slate-400 text-sm uppercase tracking-wider">Điền thông tin bên dưới</p>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-300 mb-2 uppercase tracking-wider">
                       Họ và tên *
                     </label>
                     <input
@@ -154,12 +144,12 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                       onChange={handleChange}
                       required
                       placeholder="Nguyễn Văn A"
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all outline-none"
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:border-amber-500 transition-colors outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-300 mb-2 uppercase tracking-wider">
                       Số điện thoại *
                     </label>
                     <input
@@ -169,12 +159,12 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                       onChange={handleChange}
                       required
                       placeholder="0901 234 567"
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all outline-none"
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:border-amber-500 transition-colors outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-300 mb-2 uppercase tracking-wider">
                       Email *
                     </label>
                     <input
@@ -184,14 +174,14 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                       onChange={handleChange}
                       required
                       placeholder="email@example.com"
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all outline-none"
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:border-amber-500 transition-colors outline-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-amber-500/20 hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-amber-500 text-slate-900 py-4 font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === 'loading' ? (
                       <span className="flex items-center justify-center">
@@ -207,12 +197,12 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                   </button>
 
                   {status === 'error' && (
-                    <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl text-sm">
+                    <div className="bg-red-500/10 border border-red-500 text-red-400 px-4 py-3 text-sm">
                       {config.registration.errorMessage}
                     </div>
                   )}
 
-                  <p className="text-xs text-slate-500 text-center">
+                  <p className="text-xs text-slate-500 text-center uppercase tracking-wider">
                     Bằng việc đăng ký, bạn đồng ý với điều khoản dịch vụ
                   </p>
                 </form>
