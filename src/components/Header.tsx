@@ -1,0 +1,115 @@
+import { useState, useEffect } from 'react';
+import { SiteConfig } from '../App';
+import { LogoIcon, MenuIcon, CloseIcon } from './icons';
+
+interface HeaderProps {
+  config: SiteConfig;
+}
+
+export default function Header({ config }: HeaderProps) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: '#home', label: config.navigation.home },
+    { href: '#about', label: config.navigation.about },
+    { href: '#instructors', label: config.navigation.instructors },
+    { href: '#benefits', label: config.navigation.benefits },
+    { href: '#audience', label: config.navigation.audience },
+    { href: '#legal', label: config.navigation.legal },
+    { href: '#register', label: config.navigation.register },
+    { href: '#contact', label: config.navigation.contact },
+  ];
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
+
+  return (
+    <header className={`bg-white sticky top-0 z-50 transition-all duration-500 ${
+      scrolled ? 'shadow-lg animate-fade-in-down' : 'shadow-md'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-4 animate-fade-in-left">
+            {/* National emblem style */}
+            <div className="w-14 h-14 bg-red-700 flex items-center justify-center relative animate-float-slow hover:animate-jello cursor-pointer">
+              <div className="absolute inset-1 border-2 border-yellow-400 flex items-center justify-center">
+                <LogoIcon className="w-7 h-7 text-yellow-400" />
+              </div>
+            </div>
+            <div className="animate-fade-in-up">
+              <div className="text-xs text-red-700 font-bold uppercase tracking-wider">{config.site.department}</div>
+              <div className="text-xl md:text-2xl font-bold text-red-700 uppercase tracking-wide hover:text-red-800 transition-colors duration-300">
+                {config.site.logo}
+              </div>
+              <div className="text-[10px] text-gray-600 italic">
+                {config.site.departmentEn}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center">
+            {navLinks.map((link, index) => (
+              <button
+                key={link.href}
+                onClick={() => scrollToSection(link.href)}
+                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-red-700 hover:bg-red-50 transition-all duration-300 uppercase tracking-wide relative group hover-lift"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-700 group-hover:w-full transition-all duration-300"></span>
+                {index < navLinks.length - 1 && (
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-300">|</span>
+                )}
+              </button>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-red-700 border border-red-700"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <CloseIcon className="w-6 h-6" />
+            ) : (
+              <MenuIcon className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
+        mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      }`}>
+        <div className="bg-white border-t border-gray-200 px-4 py-2 space-y-1">
+          {navLinks.map((link) => (
+            <button
+              key={link.href}
+              onClick={() => scrollToSection(link.href)}
+              className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-700 uppercase tracking-wide text-sm font-semibold border-b border-gray-100"
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </header>
+  );
+}
