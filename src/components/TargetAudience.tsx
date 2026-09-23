@@ -62,24 +62,24 @@ export default function TargetAudience({ config }: TargetAudienceProps) {
           {config.targetAudience.groups.map((group, index) => (
             <div
               key={index}
-              className={`group bg-white p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 100}ms` }}
+              className={`group bg-white p-8 border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 hover-lift hover-shine card-hover ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 100}ms`, animationDelay: `${300 + index * 100}ms` }}
             >
               <div className="relative">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-red-700 flex items-center justify-center text-yellow-400 mb-5 group-hover:bg-red-800 transition-colors duration-300">
+                <div className="w-16 h-16 bg-red-700 flex items-center justify-center text-yellow-400 mb-5 group-hover:bg-red-800 group-hover:-rotate-6 transition-all duration-500 icon-bounce">
                   {iconMap[group.icon] || iconMap.student}
                 </div>
 
                 {/* Highlight badge */}
-                <div className="inline-block mb-3">
+                <div className="inline-block mb-3 group-hover:animate-bounce-subtle">
                   <span className="px-3 py-1 bg-yellow-100 border border-yellow-700 text-yellow-700 text-xs font-bold uppercase tracking-widest">
                     {group.highlight}
                   </span>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-700 transition-colors uppercase tracking-wide">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-700 transition-colors duration-300 uppercase tracking-wide text-highlight">
                   {group.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

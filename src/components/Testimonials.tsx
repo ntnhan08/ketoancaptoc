@@ -27,18 +27,18 @@ export default function Testimonials({ config }: TestimonialsProps) {
           {config.testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`bg-white p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 group ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 150}ms` }}
+              className={`bg-white p-8 border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 group hover-lift hover-shine card-hover ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 150}ms`, animationDelay: `${300 + index * 150}ms` }}
             >
               {/* Stars */}
-              <div className="flex items-center space-x-1 mb-4">
+              <div className="flex items-center space-x-1 mb-4 group-hover:animate-bounce-subtle">
                 {[...Array(5)].map((_, i) => (
-                  <div key={i} className="w-4 h-4 bg-yellow-400"></div>
+                  <div key={i} className="w-4 h-4 bg-yellow-400 group-hover:animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}></div>
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 italic mb-6 leading-relaxed border-l-4 border-red-700 pl-4">
+              <p className="text-gray-700 italic mb-6 leading-relaxed border-l-4 border-red-700 pl-4 group-hover:border-yellow-400 transition-colors duration-300">
                 "{testimonial.content}"
               </p>
 
@@ -47,10 +47,10 @@ export default function Testimonials({ config }: TestimonialsProps) {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 object-cover"
+                  className="w-12 h-12 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div>
-                  <p className="font-bold text-gray-900 uppercase tracking-wide text-sm">{testimonial.name}</p>
+                  <p className="font-bold text-gray-900 uppercase tracking-wide text-sm group-hover:text-red-700 transition-colors duration-300">{testimonial.name}</p>
                   <p className="text-xs text-gray-600 uppercase tracking-wider">{testimonial.role}</p>
                 </div>
               </div>

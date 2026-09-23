@@ -27,20 +27,20 @@ export default function Instructors({ config }: InstructorsProps) {
           {config.instructors.list.map((instructor, index) => (
             <div
               key={index}
-              className={`group bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 150}ms` }}
+              className={`group bg-white border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift card-hover ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 150}ms`, animationDelay: `${300 + index * 150}ms` }}
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-gray-100">
                 <img
                   src={instructor.image}
                   alt={instructor.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 
                 {/* Experience badge */}
-                <div className="absolute top-0 right-0 bg-red-700 px-3 py-1">
-                  <span className="text-xs text-white font-bold uppercase tracking-wider">{instructor.experience}</span>
+                <div className="absolute top-0 right-0 bg-red-700 px-3 py-1 group-hover:bg-yellow-400 transition-colors duration-300">
+                  <span className="text-xs text-white font-bold uppercase tracking-wider group-hover:text-red-900">{instructor.experience}</span>
                 </div>
               </div>
 

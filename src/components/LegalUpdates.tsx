@@ -27,12 +27,12 @@ export default function LegalUpdates({ config }: LegalUpdatesProps) {
           {config.legalUpdates.map((update, index) => (
             <div
               key={index}
-              className={`group bg-white p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 150}ms` }}
+              className={`group bg-white p-6 border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 hover-lift hover-shine card-hover ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 150}ms`, animationDelay: `${300 + index * 150}ms` }}
             >
               <div className="flex items-start space-x-4">
                 {/* Date badge */}
-                <div className="flex-shrink-0 w-16 h-16 bg-red-700 flex flex-col items-center justify-center text-white">
+                <div className="flex-shrink-0 w-16 h-16 bg-red-700 flex flex-col items-center justify-center text-white group-hover:bg-yellow-400 group-hover:text-red-900 transition-all duration-500 group-hover:rotate-6">
                   <span className="text-xs font-bold uppercase">{update.date.split('/')[1] || config.site.currentYear}</span>
                   <span className="text-lg font-bold">{update.date.split('/')[0]}</span>
                 </div>

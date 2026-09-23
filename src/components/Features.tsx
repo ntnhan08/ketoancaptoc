@@ -60,14 +60,14 @@ export default function Features({ config }: FeaturesProps) {
           {config.features.items.map((feature, index) => (
             <div
               key={index}
-              className={`group bg-white p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${200 + index * 100}ms` }}
+              className={`group bg-white p-8 border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 hover-lift hover-shine card-hover ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${200 + index * 100}ms`, animationDelay: `${200 + index * 100}ms` }}
             >
               <div className="relative">
-                <div className="w-16 h-16 bg-red-700 flex items-center justify-center text-yellow-400 mb-5 group-hover:bg-red-800 transition-colors duration-300">
+                <div className="w-16 h-16 bg-red-700 flex items-center justify-center text-yellow-400 mb-5 group-hover:bg-red-800 group-hover:rotate-6 transition-all duration-500 icon-bounce">
                   {iconMap[feature.icon] || iconMap.calculator}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-700 transition-colors duration-300 uppercase tracking-wide">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-700 transition-colors duration-300 uppercase tracking-wide text-highlight">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

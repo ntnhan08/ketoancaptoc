@@ -14,10 +14,10 @@ function StatCard({ stat, index, isVisible }: { stat: { number: string; label: s
 
   return (
     <div
-      className="bg-white p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
+      className="bg-white p-6 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 hover-lift hover-glow"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className="text-3xl md:text-4xl font-bold text-red-700 mb-2">
+      <div className="text-3xl md:text-4xl font-bold text-red-700 mb-2 animate-scale-pulse">
         {isVisible ? count : 0}{suffix}
       </div>
       <div className="text-gray-600 font-medium uppercase tracking-wider text-sm">{stat.label}</div>

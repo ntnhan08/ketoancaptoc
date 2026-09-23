@@ -70,19 +70,19 @@ export default function Benefits({ config }: BenefitsProps) {
           {config.benefits.items.map((benefit, index) => (
             <div
               key={index}
-              className={`group bg-white p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 100}ms` }}
+              className={`group bg-white p-6 border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 hover-lift hover-shine card-hover relative ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 100}ms`, animationDelay: `${300 + index * 100}ms` }}
             >
               {/* Number indicator */}
-              <div className="absolute top-4 right-4 text-4xl font-bold text-gray-100 group-hover:text-red-100 transition-colors font-mono">
+              <div className="absolute top-4 right-4 text-4xl font-bold text-gray-100 group-hover:text-red-200 transition-all duration-500 group-hover:scale-110 font-mono">
                 {String(index + 1).padStart(2, '0')}
               </div>
 
               <div className="relative">
-                <div className="w-14 h-14 bg-red-700 flex items-center justify-center text-yellow-400 mb-4 group-hover:bg-red-800 transition-colors duration-300">
+                <div className="w-14 h-14 bg-red-700 flex items-center justify-center text-yellow-400 mb-4 group-hover:bg-red-800 group-hover:rotate-12 transition-all duration-500 icon-bounce">
                   {iconMap[benefit.icon] || iconMap.certificate}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-700 transition-colors uppercase tracking-wide">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-700 transition-colors duration-300 uppercase tracking-wide text-highlight">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">

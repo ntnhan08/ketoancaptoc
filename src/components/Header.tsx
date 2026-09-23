@@ -38,8 +38,8 @@ export default function Header({ config }: HeaderProps) {
   };
 
   return (
-    <header className={`bg-white sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'shadow-lg' : 'shadow-md'
+    <header className={`bg-white sticky top-0 z-50 transition-all duration-500 ${
+      scrolled ? 'shadow-lg animate-fade-in-down' : 'shadow-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -68,7 +68,8 @@ export default function Header({ config }: HeaderProps) {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-red-700 hover:bg-red-50 transition-colors uppercase tracking-wide relative group"
+                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-red-700 hover:bg-red-50 transition-all duration-300 uppercase tracking-wide relative group hover-lift"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-700 group-hover:w-full transition-all duration-300"></span>

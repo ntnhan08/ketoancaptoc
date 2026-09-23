@@ -33,47 +33,46 @@ export default function Hero({ config }: HeroProps) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className={`transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className={`transition-all duration-1000 animate-fade-in-up ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Breadcrumb style */}
-            <div className="flex items-center space-x-2 text-sm text-yellow-300 mb-6">
+            <div className="flex items-center space-x-2 text-sm text-yellow-300 mb-6 animate-fade-in-left">
               <span>{config.navigation.home}</span>
               <span>/</span>
               <span className="text-white">Đào tạo kế toán</span>
             </div>
 
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 transition-all duration-1000 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 transition-all duration-1000 delay-200 animate-fade-in-up ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               {config.site.heroTitle}
-            </h1>
-            
+            </h1>            
             <p className={`text-lg md:text-xl text-red-100 mb-8 max-w-lg leading-relaxed transition-all duration-1000 delay-400 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               {config.site.heroSubtitle}
             </p>
             
-            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 animate-fade-in-up ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               <button
                 onClick={scrollToRegister}
-                className="group bg-yellow-400 text-red-900 px-8 py-4 font-bold uppercase tracking-wider hover:bg-yellow-300 transition-colors duration-200 shadow-lg"
+                className="group bg-yellow-400 text-red-900 px-8 py-4 font-bold uppercase tracking-wider hover:bg-yellow-300 transition-all duration-300 shadow-lg btn-ripple hover-lift"
               >
                 Đăng ký tư vấn ngay
-                <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                <span className="inline-block ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
               </button>
               <button
                 onClick={() => document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-white hover:text-red-700 transition-colors duration-200"
+                className="border-2 border-white text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-white hover:text-red-700 transition-all duration-300 btn-ripple hover-lift"
               >
                 Tìm hiểu thêm
               </button>
             </div>
 
             {/* Stats */}
-            <div className={`mt-12 grid grid-cols-3 gap-6 transition-all duration-1000 delay-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+            <div className={`mt-12 grid grid-cols-3 gap-6 transition-all duration-1000 delay-700 animate-fade-in-up ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               {[
                 { value: '5000+', label: 'Học viên' },
                 { value: '15+', label: 'Năm kinh nghiệm' },
                 { value: '98%', label: 'Hài lòng' },
               ].map((stat, i) => (
-                <div key={i} className="border-l-4 border-yellow-400 pl-4">
-                  <div className="text-3xl font-bold text-yellow-400">{stat.value}</div>
+                <div key={i} className="border-l-4 border-yellow-400 pl-4 hover-lift transition-all duration-300" style={{ animationDelay: `${0.7 + i * 0.1}s` }}>
+                  <div className="text-3xl font-bold text-yellow-400 hover-scale-pulse">{stat.value}</div>
                   <div className="text-xs text-red-200 uppercase tracking-wider">{stat.label}</div>
                 </div>
               ))}

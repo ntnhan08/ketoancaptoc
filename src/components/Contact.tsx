@@ -71,14 +71,14 @@ export default function Contact({ config }: ContactProps) {
           {contactItems.map((item, index) => (
             <div
               key={index}
-              className={`bg-white p-6 border border-gray-200 shadow-sm hover:shadow-lg text-center group transition-all duration-500 hover:-translate-y-1 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${300 + index * 100}ms` }}
+              className={`bg-white p-6 border border-gray-200 shadow-sm hover:shadow-2xl text-center group transition-all duration-500 hover-lift hover-shine card-hover ${isInView ? 'opacity-100 translate-y-0 animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 100}ms`, animationDelay: `${300 + index * 100}ms` }}
             >
-              <div className="w-16 h-16 bg-red-700 flex items-center justify-center mx-auto mb-4 text-yellow-400 group-hover:bg-red-800 transition-colors duration-300">
+              <div className="w-16 h-16 bg-red-700 flex items-center justify-center mx-auto mb-4 text-yellow-400 group-hover:bg-red-800 group-hover:rotate-12 transition-all duration-500 icon-bounce">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-gray-900 mb-2 uppercase tracking-wider">{item.title}</h3>
-              <a href={item.link} className="text-red-700 hover:underline text-sm font-medium">
+              <h3 className="font-bold text-gray-900 mb-2 uppercase tracking-wider group-hover:text-red-700 transition-colors duration-300">{item.title}</h3>
+              <a href={item.link} className="text-red-700 hover:underline text-sm font-medium text-highlight">
                 {item.content}
               </a>
             </div>
