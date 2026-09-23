@@ -1,5 +1,6 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
+import SectionTitle from './SectionTitle';
 
 interface ContactProps {
   config: SiteConfig;
@@ -18,7 +19,6 @@ export default function Contact({ config }: ContactProps) {
       title: 'Điện thoại',
       content: config.contact.phone,
       link: `tel:${config.contact.phone}`,
-      color: 'amber',
     },
     {
       icon: (
@@ -29,7 +29,6 @@ export default function Contact({ config }: ContactProps) {
       title: 'Email',
       content: config.contact.email,
       link: `mailto:${config.contact.email}`,
-      color: 'blue',
     },
     {
       icon: (
@@ -41,7 +40,6 @@ export default function Contact({ config }: ContactProps) {
       title: 'Địa chỉ',
       content: config.contact.address,
       link: '#',
-      color: 'purple',
     },
     {
       icon: (
@@ -52,51 +50,37 @@ export default function Contact({ config }: ContactProps) {
       title: 'Giờ làm việc',
       content: config.contact.workingHours,
       link: '#',
-      color: 'green',
     },
   ];
 
-  const colorMap: Record<string, { bg: string; text: string; border: string }> = {
-    amber: { bg: 'bg-amber-500', text: 'text-amber-400', border: 'border-amber-500' },
-    blue: { bg: 'bg-blue-500', text: 'text-blue-400', border: 'border-blue-500' },
-    purple: { bg: 'bg-purple-500', text: 'text-purple-400', border: 'border-purple-500' },
-    green: { bg: 'bg-green-500', text: 'text-green-400', border: 'border-green-500' },
-  };
-
   return (
-    <section id="contact" className="py-24 bg-slate-900 border-b border-slate-700">
+    <section id="contact" className="gov-section bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="text-center mb-16">
-          <span className={`inline-block bg-green-500/10 border border-green-500 text-green-400 px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-4 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            Liên hệ
-          </span>
-          <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            Thông Tin Liên Hệ
-          </h2>
-          <p className={`text-slate-400 text-lg max-w-2xl mx-auto transition-all duration-700 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            Hãy liên hệ với chúng tôi nếu bạn cần tư vấn thêm
-          </p>
+        <div ref={ref}>
+          <SectionTitle
+            badge="Liên hệ"
+            title="Thông tin liên hệ"
+            subtitle="Hãy liên hệ với chúng tôi nếu bạn cần tư vấn thêm"
+            badgeColor="bg-green-100 text-green-700 border-green-700"
+          />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-700">
-          {contactItems.map((item, index) => {
-            const colors = colorMap[item.color];
-            return (
-              <div
-                key={index}
-                className={`bg-slate-800 border-r border-b border-slate-700 p-6 text-center group hover:bg-slate-700 transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                style={{ transitionDelay: `${300 + index * 100}ms` }}
-              >
-                <div className={`w-16 h-16 ${colors.bg} flex items-center justify-center mx-auto mb-4 text-slate-900 group-hover:scale-110 transition-transform duration-300`}>
-                  {item.icon}
-                </div>
-                <h3 className="font-bold text-white mb-2 uppercase tracking-wider">{item.title}</h3>
-                <a href={item.link} className={`${colors.text} hover:underline text-sm`}>
-                  {item.content}
-                </a>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {contactItems.map((item, index) => (
+            <div
+              key={index}
+              className={`bg-white p-6 border border-gray-200 shadow-sm hover:shadow-lg text-center group transition-all duration-500 hover:-translate-y-1 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${300 + index * 100}ms` }}
+            >
+              <div className="w-16 h-16 bg-red-700 flex items-center justify-center mx-auto mb-4 text-yellow-400 group-hover:bg-red-800 transition-colors duration-300">
+                {item.icon}
               </div>
-            );
-          })}
+              <h3 className="font-bold text-gray-900 mb-2 uppercase tracking-wider">{item.title}</h3>
+              <a href={item.link} className="text-red-700 hover:underline text-sm font-medium">
+                {item.content}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

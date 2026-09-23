@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -112,17 +113,17 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <div className="relative">
-            <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-amber-500 mx-auto"></div>
+            <div className="animate-spin h-20 w-20 border-t-4 border-b-4 border-red-700 mx-auto"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <svg className="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
             </div>
           </div>
-          <p className="mt-4 text-slate-300 text-lg font-light">Đang tải...</p>
+          <p className="mt-4 text-gray-600 text-lg font-medium">Đang tải...</p>
         </div>
       </div>
     );
@@ -130,17 +131,18 @@ function App() {
 
   if (!config) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900">
-        <div className="text-center p-8">
-          <h1 className="text-2xl font-bold text-red-400">Lỗi tải cấu hình</h1>
-          <p className="mt-2 text-slate-400">Vui lòng kiểm tra file config.json</p>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center p-8 bg-white border border-gray-200 shadow-sm">
+          <h1 className="text-2xl font-bold text-red-700 mb-2">Lỗi tải cấu hình</h1>
+          <p className="text-gray-600">Vui lòng kiểm tra file config.json</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans">
+      <TopBar />
       <Header config={config} />
       <Hero config={config} />
       <About config={config} />
