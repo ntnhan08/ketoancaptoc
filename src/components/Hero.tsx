@@ -18,7 +18,7 @@ export default function Hero({ config }: HeroProps) {
   };
 
   return (
-    <section id="home" className="relative bg-gradient-to-br from-red-700 via-red-800 to-red-900 text-white overflow-hidden">
+    <section id="home" className="relative bg-gradient-to-br from-red-700 via-red-800 to-red-900 text-white overflow-hidden particle-bg">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -26,9 +26,11 @@ export default function Hero({ config }: HeroProps) {
         }}></div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 rounded-full -mr-48 -mt-48"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-400/10 rounded-full -ml-32 -mb-32"></div>
+      {/* Animated decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 animate-morph -mr-48 -mt-48"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-400/10 animate-morph -ml-32 -mb-32" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-white/5 animate-float-diagonal"></div>
+      <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-yellow-400/10 animate-float-medium"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -80,11 +82,11 @@ export default function Hero({ config }: HeroProps) {
           </div>
 
           {/* Right - Image/Visual */}
-          <div className={`hidden lg:block transition-all duration-1000 delay-300 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="relative bg-white/10 backdrop-blur-sm border-2 border-yellow-400/30 p-8">
-              <div className="bg-white text-gray-800 p-6 shadow-2xl">
+          <div className={`hidden lg:block transition-all duration-1000 delay-300 animate-fade-in-right ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className="relative bg-white/10 backdrop-blur-sm border-2 border-yellow-400/30 p-8 hover-3d">
+              <div className="bg-white text-gray-800 p-6 shadow-2xl animate-float-slow">
                 <div className="border-b-2 border-red-700 pb-3 mb-4">
-                  <h3 className="text-lg font-bold text-red-700 uppercase">Chương trình đào tạo</h3>
+                  <h3 className="text-lg font-bold text-red-700 uppercase">{config.site.programTitle}</h3>
                   <p className="text-xs text-gray-600">Cập nhật {config.site.currentYear}</p>
                 </div>
                 <div className="space-y-3">

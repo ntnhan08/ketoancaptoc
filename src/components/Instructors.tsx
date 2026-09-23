@@ -35,13 +35,16 @@ export default function Instructors({ config }: InstructorsProps) {
                 <img
                   src={instructor.image}
                   alt={instructor.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 group-hover:animate-pulse"
                 />
                 
                 {/* Experience badge */}
-                <div className="absolute top-0 right-0 bg-red-700 px-3 py-1 group-hover:bg-yellow-400 transition-colors duration-300">
+                <div className="absolute top-0 right-0 bg-red-700 px-3 py-1 group-hover:bg-yellow-400 transition-all duration-300 group-hover:animate-bounce-subtle">
                   <span className="text-xs text-white font-bold uppercase tracking-wider group-hover:text-red-900">{instructor.experience}</span>
                 </div>
+                
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-red-700/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               {/* Content */}

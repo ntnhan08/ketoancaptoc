@@ -44,16 +44,16 @@ export default function Header({ config }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 animate-fade-in-left">
             {/* National emblem style */}
-            <div className="w-14 h-14 bg-red-700 flex items-center justify-center relative">
+            <div className="w-14 h-14 bg-red-700 flex items-center justify-center relative animate-float-slow hover:animate-jello cursor-pointer">
               <div className="absolute inset-1 border-2 border-yellow-400 flex items-center justify-center">
                 <LogoIcon className="w-7 h-7 text-yellow-400" />
               </div>
             </div>
-            <div>
+            <div className="animate-fade-in-up">
               <div className="text-xs text-red-700 font-bold uppercase tracking-wider">{config.site.department}</div>
-              <div className="text-xl md:text-2xl font-bold text-red-700 uppercase tracking-wide">
+              <div className="text-xl md:text-2xl font-bold text-red-700 uppercase tracking-wide hover:text-red-800 transition-colors duration-300">
                 {config.site.logo}
               </div>
               <div className="text-[10px] text-gray-600 italic">

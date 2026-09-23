@@ -141,51 +141,49 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
-                        Họ và tên *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Nguyễn Văn A"
-                        className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-colors outline-none"
-                      />
-                    </div>
+                  <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                    <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
+                      Họ và tên *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      placeholder="Nguyễn Văn A"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 outline-none input-animate"
+                    />
+                  </div>
+                  <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                    <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
+                      Số điện thoại *
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      placeholder="0901 234 567"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 outline-none input-animate"
+                    />
+                  </div>
 
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
-                        Số điện thoại *
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        placeholder="0901 234 567"
-                        className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-colors outline-none"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="email@example.com"
-                        className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-colors outline-none"
-                      />
-                    </div>
-
+                  <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                    <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      placeholder="email@example.com"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 outline-none input-animate"
+                    />
+                  </div>
                   <button
                     type="submit"
                     disabled={status === 'loading'}

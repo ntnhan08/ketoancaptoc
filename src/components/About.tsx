@@ -73,7 +73,7 @@ export default function About({ config }: AboutProps) {
           </div>
 
           {/* Right - Stats */}
-          <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-x-0 animate-fade-in-right' : 'opacity-0 translate-x-10'}`}>
             {config.about.stats.map((stat, index) => (
               <StatCard key={index} stat={stat} index={index} isVisible={isInView} />
             ))}

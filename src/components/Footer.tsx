@@ -19,7 +19,7 @@ export default function Footer({ config }: FooterProps) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-red-700 flex items-center justify-center relative">
+              <div className="w-12 h-12 bg-red-700 flex items-center justify-center relative animate-float-slow">
                 <div className="absolute inset-1 border-2 border-yellow-400 flex items-center justify-center">
                   <LogoIcon className="w-6 h-6 text-yellow-400" />
                 </div>
