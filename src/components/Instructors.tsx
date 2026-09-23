@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { InstructorsIcon } from './icons';
 
 interface InstructorsProps {
   config: SiteConfig;
@@ -18,6 +19,7 @@ export default function Instructors({ config }: InstructorsProps) {
             title={config.instructors.title}
             subtitle={config.instructors.subtitle}
             badgeColor="bg-blue-100 text-blue-700 border-blue-700"
+            icon={<InstructorsIcon className="w-8 h-8" />}
           />
         </div>
 

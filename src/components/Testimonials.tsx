@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { TestimonialsIcon } from './icons';
 
 interface TestimonialsProps {
   config: SiteConfig;
@@ -18,6 +19,7 @@ export default function Testimonials({ config }: TestimonialsProps) {
             title="Học viên nói gì về chúng tôi"
             subtitle="Những chia sẻ chân thực từ học viên đã tham gia"
             badgeColor="bg-purple-100 text-purple-700 border-purple-700"
+            icon={<TestimonialsIcon className="w-8 h-8" />}
           />
         </div>
 

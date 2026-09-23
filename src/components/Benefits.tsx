@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { BenefitsIcon } from './icons';
 
 interface BenefitsProps {
   config: SiteConfig;
@@ -61,6 +62,7 @@ export default function Benefits({ config }: BenefitsProps) {
             title={config.benefits.title}
             subtitle={config.benefits.subtitle}
             badgeColor="bg-green-100 text-green-700 border-green-700"
+            icon={<BenefitsIcon className="w-8 h-8" />}
           />
         </div>
 

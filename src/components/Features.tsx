@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { FeaturesIcon } from './icons';
 
 interface FeaturesProps {
   config: SiteConfig;
@@ -51,6 +52,7 @@ export default function Features({ config }: FeaturesProps) {
             title="Chuyên sâu & thực tiễn"
             subtitle="Đào tạo toàn diện từ nghiệp vụ kế toán đến pháp luật thuế"
             badgeColor="bg-red-100 text-red-700 border-red-700"
+            icon={<FeaturesIcon className="w-8 h-8" />}
           />
         </div>
 

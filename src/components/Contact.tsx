@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { ContactIcon } from './icons';
 
 interface ContactProps {
   config: SiteConfig;
@@ -62,6 +63,7 @@ export default function Contact({ config }: ContactProps) {
             title="Thông tin liên hệ"
             subtitle="Hãy liên hệ với chúng tôi nếu bạn cần tư vấn thêm"
             badgeColor="bg-green-100 text-green-700 border-green-700"
+            icon={<ContactIcon className="w-8 h-8" />}
           />
         </div>
 

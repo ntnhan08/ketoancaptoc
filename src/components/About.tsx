@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView, useCountUp } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { AboutIcon } from './icons';
 
 interface AboutProps {
   config: SiteConfig;
@@ -35,6 +36,7 @@ export default function About({ config }: AboutProps) {
             badge="Giới thiệu"
             title={config.about.title}
             badgeColor="bg-red-100 text-red-700 border-red-700"
+            icon={<AboutIcon className="w-8 h-8" />}
           />
         </div>
 

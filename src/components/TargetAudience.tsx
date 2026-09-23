@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { AudienceIcon } from './icons';
 
 interface TargetAudienceProps {
   config: SiteConfig;
@@ -53,6 +54,7 @@ export default function TargetAudience({ config }: TargetAudienceProps) {
             title={config.targetAudience.title}
             subtitle={config.targetAudience.subtitle}
             badgeColor="bg-yellow-100 text-yellow-700 border-yellow-700"
+            icon={<AudienceIcon className="w-8 h-8" />}
           />
         </div>
 

@@ -1,6 +1,7 @@
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { LegalIcon } from './icons';
 
 interface LegalUpdatesProps {
   config: SiteConfig;
@@ -18,6 +19,7 @@ export default function LegalUpdates({ config }: LegalUpdatesProps) {
             title="Văn bản luật mới nhất"
             subtitle="Luôn cập nhật các quy định pháp luật thuế mới nhất để học viên nắm vững"
             badgeColor="bg-blue-100 text-blue-700 border-blue-700"
+            icon={<LegalIcon className="w-8 h-8" />}
           />
         </div>
 

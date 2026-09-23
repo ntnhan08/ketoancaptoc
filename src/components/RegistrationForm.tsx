@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SiteConfig } from '../App';
 import { useInView } from '../hooks/useAnimations';
 import SectionTitle from './SectionTitle';
+import { RegisterIcon } from './icons';
 
 interface RegistrationFormProps {
   config: SiteConfig;
@@ -64,6 +65,7 @@ export default function RegistrationForm({ config }: RegistrationFormProps) {
             title={config.registration.title}
             subtitle={config.registration.subtitle}
             badgeColor="bg-red-100 text-red-700 border-red-700"
+            icon={<RegisterIcon className="w-8 h-8" />}
           />
         </div>
 

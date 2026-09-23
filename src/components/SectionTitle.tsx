@@ -1,13 +1,21 @@
+import { ReactNode } from 'react';
+
 interface SectionTitleProps {
   badge: string;
   title: string;
   subtitle?: string;
   badgeColor?: string;
+  icon?: ReactNode;
 }
 
-export default function SectionTitle({ badge, title, subtitle, badgeColor = 'bg-red-100 text-red-700 border-red-700' }: SectionTitleProps) {
+export default function SectionTitle({ badge, title, subtitle, badgeColor = 'bg-red-100 text-red-700 border-red-700', icon }: SectionTitleProps) {
   return (
     <div className="text-center mb-12">
+      {icon && (
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-red-700 text-yellow-400 mb-4">
+          {icon}
+        </div>
+      )}
       <span className={`inline-block ${badgeColor} border px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-4`}>
         {badge}
       </span>
