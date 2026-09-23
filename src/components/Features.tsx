@@ -48,16 +48,16 @@ export default function Features({ config }: FeaturesProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref}>
           <SectionTitle
-            badge="Năng lực đào tạo"
-            title="Chuyên sâu & thực tiễn"
-            subtitle="Đào tạo toàn diện từ nghiệp vụ kế toán đến pháp luật thuế"
+            badge={config.features.badge}
+            title={config.features.title}
+            subtitle={config.features.subtitle}
             badgeColor="bg-red-100 text-red-700 border-red-700"
             icon={<FeaturesIcon className="w-8 h-8" />}
           />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {config.features.map((feature, index) => (
+          {config.features.items.map((feature, index) => (
             <div
               key={index}
               className={`group bg-white p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}

@@ -33,7 +33,7 @@ export default function LegalUpdates({ config }: LegalUpdatesProps) {
               <div className="flex items-start space-x-4">
                 {/* Date badge */}
                 <div className="flex-shrink-0 w-16 h-16 bg-red-700 flex flex-col items-center justify-center text-white">
-                  <span className="text-xs font-bold uppercase">{update.date.split('/')[1] || '2024'}</span>
+                  <span className="text-xs font-bold uppercase">{update.date.split('/')[1] || config.site.currentYear}</span>
                   <span className="text-lg font-bold">{update.date.split('/')[0]}</span>
                 </div>
 

@@ -19,14 +19,14 @@ export default function Header({ config }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Trang chủ' },
-    { href: '#about', label: 'Giới thiệu' },
-    { href: '#instructors', label: 'Giảng viên' },
-    { href: '#benefits', label: 'Giá trị' },
-    { href: '#audience', label: 'Đối tượng' },
-    { href: '#legal', label: 'Pháp luật' },
-    { href: '#register', label: 'Đăng ký' },
-    { href: '#contact', label: 'Liên hệ' },
+    { href: '#home', label: config.navigation.home },
+    { href: '#about', label: config.navigation.about },
+    { href: '#instructors', label: config.navigation.instructors },
+    { href: '#benefits', label: config.navigation.benefits },
+    { href: '#audience', label: config.navigation.audience },
+    { href: '#legal', label: config.navigation.legal },
+    { href: '#register', label: config.navigation.register },
+    { href: '#contact', label: config.navigation.contact },
   ];
 
   const scrollToSection = (href: string) => {
@@ -52,12 +52,12 @@ export default function Header({ config }: HeaderProps) {
               </div>
             </div>
             <div>
-              <div className="text-xs text-red-700 font-bold uppercase tracking-wider">Trung tâm đào tạo</div>
+              <div className="text-xs text-red-700 font-bold uppercase tracking-wider">{config.site.department}</div>
               <div className="text-xl md:text-2xl font-bold text-red-700 uppercase tracking-wide">
                 {config.site.logo}
               </div>
               <div className="text-[10px] text-gray-600 italic">
-                Professional Accounting Training Center
+                {config.site.departmentEn}
               </div>
             </div>
           </div>

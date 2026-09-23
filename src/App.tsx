@@ -21,6 +21,20 @@ export interface SiteConfig {
     heroTitle: string;
     heroSubtitle: string;
     heroImage: string;
+    portalTitle: string;
+    hotline: string;
+    department: string;
+    departmentEn: string;
+    copyrightText: string;
+    currentYear: string;
+    privacyPolicy: string;
+    termsOfUse: string;
+    loadingText: string;
+    errorTitle: string;
+    errorMessage: string;
+    programTitle: string;
+    enrollmentLabel: string;
+    enrollmentValue: string;
   };
   about: {
     title: string;
@@ -28,10 +42,15 @@ export interface SiteConfig {
     stats: { number: string; label: string }[];
   };
   features: {
-    icon: string;
+    badge: string;
     title: string;
-    description: string;
-  }[];
+    subtitle: string;
+    items: {
+      icon: string;
+      title: string;
+      description: string;
+    }[];
+  };
   instructors: {
     title: string;
     subtitle: string;
@@ -92,6 +111,18 @@ export interface SiteConfig {
     successMessage: string;
     errorMessage: string;
   };
+  navigation: {
+    home: string;
+    about: string;
+    instructors: string;
+    benefits: string;
+    audience: string;
+    legal: string;
+    register: string;
+    contact: string;
+    features: string;
+    testimonials: string;
+  };
 }
 
 function App() {
@@ -123,7 +154,7 @@ function App() {
               </svg>
             </div>
           </div>
-          <p className="mt-4 text-gray-600 text-lg font-medium">Đang tải...</p>
+          <p className="mt-4 text-gray-600 text-lg font-medium">Đang tải thông tin...</p>
         </div>
       </div>
     );
@@ -142,7 +173,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      <TopBar />
+      <TopBar config={config} />
       <Header config={config} />
       <Hero config={config} />
       <About config={config} />

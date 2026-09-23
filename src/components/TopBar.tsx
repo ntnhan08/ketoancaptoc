@@ -1,12 +1,18 @@
-export default function TopBar() {
+import { SiteConfig } from '../App';
+
+interface TopBarProps {
+  config: SiteConfig;
+}
+
+export default function TopBar({ config }: TopBarProps) {
   return (
     <div className="bg-red-700 text-white text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-8">
           <div className="flex items-center space-x-4">
-            <span className="hidden md:inline">CỔNG THÔNG TIN ĐÀO TẠO KẾ TOÁN</span>
+            <span className="hidden md:inline font-bold uppercase tracking-wider">{config.site.portalTitle}</span>
             <span className="hidden lg:inline">|</span>
-            <span className="hidden lg:inline">Đường dây nóng: 1900 1234</span>
+            <span className="hidden lg:inline">Hotline: {config.site.hotline}</span>
           </div>
           <div className="flex items-center space-x-3">
             <span className="hidden md:inline">Thứ {new Date().getDay() === 0 ? 'Chủ nhật' : new Date().getDay() + 1}, ngày {new Date().getDate()}/{new Date().getMonth() + 1}/{new Date().getFullYear()}</span>

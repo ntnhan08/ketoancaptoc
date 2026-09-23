@@ -5,7 +5,33 @@
     "tagline": "Thành thạo thực tế - Vững vàng luật pháp",
     "heroTitle": "Lớp Học Kế Toán Thực Chiến",
     "heroSubtitle": "Đào tạo kế toán chuyên sâu về nghiệp vụ thực tế và pháp luật thuế. Cam kết học viên tự tin xử lý mọi tình huống doanh nghiệp.",
-    "heroImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+    "heroImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    "portalTitle": "LỚP HỌC KẾ TOÁN THỰC CHIẾN",
+    "hotline": "1900 1234",
+    "department": "Trung tâm đào tạo",
+    "departmentEn": "Professional Accounting Training Center",
+    "copyrightText": "All rights reserved.",
+    "currentYear": "2024",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfUse": "Điều khoản sử dụng",
+    "loadingText": "Đang tải...",
+    "errorTitle": "Lỗi tải cấu hình",
+    "errorMessage": "Vui lòng kiểm tra file config.json",
+    "programTitle": "Chương trình đào tạo",
+    "enrollmentLabel": "Khai giảng",
+    "enrollmentValue": "Hàng tháng"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "instructors": "Giảng viên",
+    "benefits": "Giá trị",
+    "audience": "Đối tượng",
+    "legal": "Pháp luật",
+    "register": "Đăng ký",
+    "contact": "Liên hệ",
+    "features": "Năng lực đào tạo",
+    "testimonials": "Học viên"
   },
   "about": {
     "title": "Về Chúng Tôi",
@@ -17,7 +43,11 @@
       { "number": "100+", "label": "Doanh nghiệp" }
     ]
   },
-  "features": [
+  "features": {
+    "badge": "Năng lực đào tạo",
+    "title": "Chuyên sâu & thực tiễn",
+    "subtitle": "Đào tạo toàn diện từ nghiệp vụ kế toán đến pháp luật thuế",
+    "items": [
     {
       "icon": "calculator",
       "title": "Nghiệp Vụ Thực Tế",
@@ -48,7 +78,8 @@
       "title": "Hỗ Trợ Trọn Đời",
       "description": "Hỗ trợ học viên trong suốt quá trình làm việc. Cộng đồng kế toán thực chiến luôn đồng hành."
     }
-  ],
+  ]
+  },
   "instructors": {
     "title": "Đội Ngũ Giảng Viên",
     "subtitle": "Những chuyên gia hàng đầu với kinh nghiệm thực chiến",

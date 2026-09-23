@@ -25,7 +25,7 @@ export default function Footer({ config }: FooterProps) {
                 </div>
               </div>
               <div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">Trung tâm đào tạo</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">{config.site.department}</div>
                 <div className="text-xl font-bold uppercase tracking-wide">{config.site.logo}</div>
               </div>
             </div>
@@ -58,12 +58,12 @@ export default function Footer({ config }: FooterProps) {
             <h3 className="text-lg font-bold mb-4 text-white uppercase tracking-wider border-b-2 border-red-700 pb-2 inline-block">Liên kết</h3>
             <ul className="space-y-3">
               {[
-                { href: '#home', label: 'Trang chủ' },
-                { href: '#about', label: 'Giới thiệu' },
-                { href: '#instructors', label: 'Giảng viên' },
-                { href: '#benefits', label: 'Giá trị' },
-                { href: '#audience', label: 'Đối tượng' },
-                { href: '#register', label: 'Đăng ký' },
+                { href: '#home', label: config.navigation.home },
+                { href: '#about', label: config.navigation.about },
+                { href: '#instructors', label: config.navigation.instructors },
+                { href: '#benefits', label: config.navigation.benefits },
+                { href: '#audience', label: config.navigation.audience },
+                { href: '#register', label: config.navigation.register },
               ].map((link) => (
                 <li key={link.href}>
                   <button
@@ -82,10 +82,10 @@ export default function Footer({ config }: FooterProps) {
             <h3 className="text-lg font-bold mb-4 text-white uppercase tracking-wider border-b-2 border-red-700 pb-2 inline-block">Chương trình</h3>
             <ul className="space-y-3">
               {[
-                { href: '#features', label: 'Năng lực đào tạo' },
-                { href: '#legal', label: 'Cập nhật pháp luật' },
-                { href: '#testimonials', label: 'Học viên' },
-                { href: '#contact', label: 'Liên hệ' },
+                { href: '#features', label: config.navigation.features },
+                { href: '#legal', label: config.navigation.legal },
+                { href: '#testimonials', label: config.navigation.testimonials },
+                { href: '#contact', label: config.navigation.contact },
               ].map((link) => (
                 <li key={link.href}>
                   <button
@@ -101,7 +101,7 @@ export default function Footer({ config }: FooterProps) {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white uppercase tracking-wider border-b-2 border-red-700 pb-2 inline-block">Liên hệ</h3>
+            <h3 className="text-lg font-bold mb-4 text-white uppercase tracking-wider border-b-2 border-red-700 pb-2 inline-block">{config.navigation.contact}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <div className="w-4 h-4 bg-red-700 flex-shrink-0 mt-1"></div>
@@ -125,14 +125,14 @@ export default function Footer({ config }: FooterProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm uppercase tracking-wider">
-              © 2024 {config.site.logo}. All rights reserved.
+              © {config.site.currentYear} {config.site.logo}. {config.site.copyrightText}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-500 hover:text-red-400 text-sm transition-colors uppercase tracking-wider">
-                Chính sách bảo mật
+                {config.site.privacyPolicy}
               </a>
               <a href="#" className="text-gray-500 hover:text-red-400 text-sm transition-colors uppercase tracking-wider">
-                Điều khoản sử dụng
+                {config.site.termsOfUse}
               </a>
             </div>
           </div>

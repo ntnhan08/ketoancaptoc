@@ -50,7 +50,7 @@ export default function About({ config }: AboutProps) {
               <div className="space-y-3">
                 {[
                   'Đội ngũ giảng viên là Kế toán trưởng, Luật sư thuế',
-                  'Chương trình cập nhật theo luật thuế mới nhất 2024',
+                  `Chương trình cập nhật theo luật thuế mới nhất ${config.site.currentYear}`,
                   'Thực hành trên chứng từ của doanh nghiệp thực',
                   'Hỗ trợ học viên đến khi thành thạo công việc',
                   'Cam kết hoàn tiền nếu không hài lòng',

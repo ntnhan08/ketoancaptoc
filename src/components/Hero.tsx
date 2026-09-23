@@ -36,7 +36,7 @@ export default function Hero({ config }: HeroProps) {
           <div className={`transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Breadcrumb style */}
             <div className="flex items-center space-x-2 text-sm text-yellow-300 mb-6">
-              <span>Trang chủ</span>
+              <span>{config.navigation.home}</span>
               <span>/</span>
               <span className="text-white">Đào tạo kế toán</span>
             </div>
@@ -86,7 +86,7 @@ export default function Hero({ config }: HeroProps) {
               <div className="bg-white text-gray-800 p-6 shadow-2xl">
                 <div className="border-b-2 border-red-700 pb-3 mb-4">
                   <h3 className="text-lg font-bold text-red-700 uppercase">Chương trình đào tạo</h3>
-                  <p className="text-xs text-gray-600">Cập nhật 2024</p>
+                  <p className="text-xs text-gray-600">Cập nhật {config.site.currentYear}</p>
                 </div>
                 <div className="space-y-3">
                   {[
