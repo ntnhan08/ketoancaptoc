@@ -1,8 +1,9 @@
 {
-  "routes": [
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "status": 404
+      "source": "/:path*",
+      "destination": "/404"
     }
   ]
 }
